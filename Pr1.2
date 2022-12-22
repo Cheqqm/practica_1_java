@@ -1,31 +1,46 @@
-package practice;
-import java.util.Scanner; //класс который помогает считывать данный введеные пользователем
-public class practice2 {
-public static void main(String[] args){
-int[]array= new int[5];
-int i=0;
-int Sum = 0;
-Scanner in = new Scanner(System.in);
-System.out.println("Введите элементы массива");
-while (i < 5) {
-array[i]=in.nextInt();
-Sum=Sum+array[i];
-i++;
-}
-System.out.println("Сумма = "+ Sum);
-int min = array[0];
-for (int f=0; f<array.length; f++){
-if (min > array[f]){
-min = array[f];
-}
-}
-System.out.println("Минимальный элемент массива: " + min);
-int max = array[0];
-for (int f=0; f<array.length; f++){
-if (max < array[f]){
-max = array[f];
-}
-}
-System.out.println("Максимальный элемент массива: " + max);
-}
+package Practic1;
+import java.util.Scanner;
+public class Class2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] b = new int[10];
+        int i = 0;
+        while (  i < 10 ){
+            b[i] = sc.nextInt();
+            i++;
+        }
+        i = 0;
+        int summa = 0;
+        int max = b[0];
+        int min = b[0];
+        while (  i < 10 ){
+            summa += b[i];
+            if (b[i]>max ) max = b[i];
+            if (b[i]<min ) min = b[i];
+            i++;
+        }
+        System.out.println(summa);
+        System.out.println(min);
+        System.out.println(max);
+        int[] a = new int[10];
+        i = 0;
+        summa = 0;
+        do  {
+            a[i] = sc.nextInt();
+            i++;
+        } while (i<10);
+        max = a[0];
+        min = a[0] ;
+        i = 0;
+       do  {
+           summa += a[i];
+           if (a[i] > max) max = a[i];
+           if (a[i] < min) min = a[i];
+           i++;
+       } while (i<10);
+        System.out.println(summa);
+        System.out.println(min);
+        System.out.println(max);
+    }
+
 }
